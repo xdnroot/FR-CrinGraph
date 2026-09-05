@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Crinear Daybreak"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["Crinear Daybreak(Verus Modi C4 and Stock Wide Eartips)"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data-custom/",                                // Directory where graph files are stored
       data_format = "AudioTools",                   // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
