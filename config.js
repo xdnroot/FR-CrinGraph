@@ -1,6 +1,6 @@
 // Configuration options
-const init_phones = ["HTH67"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
-      DIR = "data/",                                // Directory where graph files are stored
+const init_phones = ["Harmonic Empire Cai Wenji"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+      DIR = "data_custom/",                                // Directory where graph files are stored
       data_format = "AudioTools",                   // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
@@ -14,9 +14,9 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
       alt_tutorial = false,                         // Display a configurable frequency response guide below the graph
       site_url = 'graph.html',                      // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "CrinGraph",                 // Optional. Watermark appears behind graphs
-      watermark_image_url = "cringraph-logo.svg",   // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "CrinGraph",                     // Optional. Appended to the page title if share URLs are enabled
+      watermark_text = "",                 // Optional. Watermark appears behind graphs
+      watermark_image_url = "webiptek-circle-blue.svg",   // Optional. If image file is in same directory as config, can be just the filename
+      page_title = "FR Graph",                     // Optional. Appended to the page title if share URLs are enabled
       page_description = "View and compare frequency response graphs for earphones",
       accessories = false,                          // If true, displays specified HTML at the bottom of the page. Configure further below
       externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
@@ -28,7 +28,7 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
       targetDashed = false,                         // If true, makes target curves dashed lines
       targetColorCustom = false,                    // If false, targets appear as a random gray value. Can replace with a fixed color value to make all targets the specified color, e.g. "black"
       labelsPosition = "default",                   // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
-      stickyLabels = false,                         // "Sticky" labels 
+      stickyLabels = false,                         // "Sticky" labels
       analyticsEnabled = false;                     // Enables Google Analytics 4 measurement of site usage
 
 // Specify which targets to display
@@ -48,13 +48,13 @@ const targets = [
 function watermark(svg) {
     let wm = svg.append("g")
         .attr("transform", "translate("+(pad.l+W/2)+","+(pad.t+H/2-20)+")")
-        .attr("opacity",0.2);
-    
+        .attr("opacity",0.1);
+
     if ( watermark_image_url ) {
         wm.append("image")
             .attrs({x:-64, y:-64, width:128, height:128, "xlink:href":watermark_image_url});
     }
-    
+
     if ( watermark_text ) {
         wm.append("text")
             .attrs({x:0, y:70, "font-size":28, "text-anchor":"middle", "class":"graph-name"})
@@ -77,7 +77,7 @@ function initTsvParse() {
         var dataStart = 2,
             dataEnd = 482;
     }
-    
+
     tsvParse = fr => d3.tsvParseRows(fr).slice(dataStart,dataEnd)
         .map(r=>r.map(d=>+d));
 }
@@ -90,10 +90,10 @@ function setLayout() {
     function applyStylesheet(styleSheet) {
         var docHead = document.querySelector("head"),
             linkTag = document.createElement("link");
-        
+
         linkTag.setAttribute("rel", "stylesheet");
         linkTag.setAttribute("type", "text/css");
-        
+
         linkTag.setAttribute("href", styleSheet);
         docHead.append(linkTag);
     }
@@ -124,8 +124,8 @@ setRestricted();
 
 // Configure HTML accessories to appear at the bottom of the page. Displayed only if accessories (above) is true
 // There are a few templates here for ease of use / examples, but these variables accept any HTML
-const 
-    // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc. 
+const
+    // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc.
     simpleAbout = `
         <p class="center">This web software is based on the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project.</p>
     `,
@@ -232,7 +232,7 @@ function setupGraphAnalytics() {
         const pageHead = document.querySelector("head"),
               graphAnalytics = document.createElement("script"),
               graphAnalyticsSrc = "graphAnalytics.js";
-        
+
         graphAnalytics.setAttribute("src", graphAnalyticsSrc);
         pageHead.append(graphAnalytics);
     }

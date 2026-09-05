@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Combinations",
+    "phones": [
+        {"name":["Variations"],"file":["Combo Variant 1","Combo Variant 2","Combo Variant 3","Combo Variant 4"],"suffix":["var1","var2","var3","var4"]}
+    ]
+  },
+  {
+    "name": "Harmonic Empire Cai Wenji",
+    "phones": [
+        {
+            "name": "Cai Wenji (HE Sonic Eartips)",
+            "file": "HE Cai Wenji (HE Sonic Eartips)"
+        }
+    ]
+  }
+]
