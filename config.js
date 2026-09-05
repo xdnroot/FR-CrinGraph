@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Harmonic Empire Cai Wenji"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["Crinear Daybreak"],                      // Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data-custom/",                                // Directory where graph files are stored
       data_format = "AudioTools",                   // Accepts "AudioTools," "REW," or "other"
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
@@ -27,15 +27,15 @@ const init_phones = ["Harmonic Empire Cai Wenji"],                      // Optio
       darkModeButton = true,                        // Adds a "Dark Mode" button the main toolbar to let users set preference
       targetDashed = false,                         // If true, makes target curves dashed lines
       targetColorCustom = false,                    // If false, targets appear as a random gray value. Can replace with a fixed color value to make all targets the specified color, e.g. "black"
-      labelsPosition = "default",                   // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
+      labelsPosition = "bottom-left",                   // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
       stickyLabels = false,                         // "Sticky" labels
       analyticsEnabled = false;                     // Enables Google Analytics 4 measurement of site usage
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:["Diffuse Field","Etymotic","Free Field","Innerfidelity ID"] },
+    { type:"Neutral",    files:["IEF Neutral 2023","Etymotic","Free Field","Innerfidelity ID"] },
     { type:"Reviewer",   files:["Antdroid","Bad Guy","Banbeucmas","Crinacle","Precogvision","Super Review"] },
-    { type:"Preference", files:["Harman","Rtings","Sonarworks"] }
+    { type:"Preference", files:["JM-1","Rtings","Sonarworks"] }
 ];
 
 

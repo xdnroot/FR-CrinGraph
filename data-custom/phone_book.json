@@ -6,11 +6,50 @@
     ]
   },
   {
+    "name": "Crinear Daybreak",
+    "phones": [
+        {
+            "name": "(Verus Modi C4 and Stock Wide Eartips)",
+            "file": "Crinear Daybreak (Verus Modi C4 and Stock Wide Eartips)"
+        },
+        {
+            "name": "(Verus Modi C4 and Eletech Baroque OG)",
+            "file": "Crinear Daybreak (Verus Modi C4 and Eletech Baroque OG)"
+        }
+    ]
+  },
+  {
+    "name": "Moondrop CHU 3",
+    "phones": [
+        {
+            "name": "(Stock Cable and Eartips)",
+            "file": "Moondrop CHU 3 (Stock Cable and Eartips)"
+        },
+        {
+            "name": "(Xinhs Mist Cable and Stock Eartips)",
+            "file": "Moondrop CHU 3 (Xinhs Mist Cable and Stock Eartips)"
+        }
+    ]
+  },
+  {
     "name": "Harmonic Empire Cai Wenji",
     "phones": [
         {
-            "name": "Eartips: HE Sonic",
-            "file": "HE Cai Wenji (HE Sonic Eartips)"
+            "name": "(Stock Cable and Eartips)",
+            "file": "HE Cai Wenji (Stock Cable and Eartips)"
+        }
+    ]
+  },
+  {
+    "name": "Moondrop CHU 2",
+    "phones": [
+        {
+            "name": "(CHU3 Cable and Eartips - Filter Changed)",
+            "file": "Moondrop CHU 2 (CHU3 Cable and Eartips - Filter Changed)"
+        },
+        {
+            "name": "(Xinhs SPC Cable and Eartips - Filter Changed)",
+            "file": "Moondrop CHU 2 (Xinhs SPC Cable and Eartips - Filter Changed)"
         }
     ]
   }
